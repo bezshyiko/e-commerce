@@ -334,306 +334,279 @@
 				</div>
 			</div>
 		</header>
-		<main class="page">
-			<section data-fullscreen class="main">
-				<div class="main__slider">
-					<div class="main__wrapper swiper-wrapper">
-						<a href="" class="main__slide swiper-slide">
-							<h2 class="main__title">
-								<span>Luxury </span>
-								<span>Fashion</span>
-								<span>&Accessories</span>
-							</h2>
-							<picture><source srcset="img/Main/1.webp" type="image/webp"><img src="img/Main/1.jpg" alt=""></picture>
-						</a>
-						<a href="" class="main__slide swiper-slide">
-							<h2 class="main__title">
-								<span>Luxury </span>
-								<span>Fashion</span>
-								<span>&Accessories</span>
-							</h2>
-							<picture><source srcset="img/Main/2.webp" type="image/webp"><img src="img/Main/2.jpg" alt=""></picture>
-						</a>
-						<a href="" class="main__slide swiper-slide">
-							<h2 class="main__title">
-								<span>Luxury </span>
-								<span>Fashion</span>
-								<span>&Accessories</span>
-							</h2>
-							<picture><source srcset="img/Main/3.webp" type="image/webp"><img src="img/Main/3.jpg" alt=""></picture>
-						</a>
-					</div>
-					<div class="main__pagination">
-					</div>
-					<div class="main__navigation swiper-navigation">
-						<button class="main__button-prev button-prev icon-arrow"></button>
-						<button class="main__button-next button-next icon-arrow"></button>
-					</div>
-				</div>
-			</section>
-			<section class="new">
-				<div class="new__container">
-					<div class="new__title">
-						<h2 class="title">New Arrival</h2>
-						<div class="new__decor decor">
-							<span></span>
-							<span></span>
-							<span></span>
+		<div class="catalog">
+			<div class="catalog__container">
+				<div class="catalog__filter filter-catalog">
+					<div class="filter-catalog__item">
+						<div class="filter-catalog__category">
+							<select data-pseudo-label="Apparel" multiple data-tags=".catalog__tags">
+								<option value="2">New</option>
+								<option value="3">Apparel</option>
+								<option value="4">Bag</option>
+								<option value="5">Shoes</option>
+							</select>
 						</div>
 					</div>
-					<div class="new__filter filter">
-						<button data-filter="All" class="filter__category _active-filter">All</button>
-						<button data-filter="Apparel" class="filter__category">Apparel</button>
-						<button data-filter="Dress" class="filter__category">Dress</button>
-						<button data-filter="Tshirt" class="filter__category">Tshirt</button>
-						<button data-filter="Bag" class="filter__category">Bag</button>
+					<div class="filter-catalog__item">
+						<button data-view class="filter-catalog__view icon-grid">
+							<span class="icon-list"></span>
+							<span class="icon-full"></span>
+						</button>
 					</div>
-					<div data-catalog class="new__products products-new">
-						<a data-catalog-item="Apparel" href="" class="products-new__card">
-							<div class="products-new__img">
-								<picture><source srcset="img/NewArrival/1.webp" type="image/webp"><img src="img/NewArrival/1.jpg" alt=""></picture>
+					<div class="filter-catalog__item">
+						<button data-filter-button class="filter-catalog__options icon-filter"></button>
+						<div class="filter-catalog__body filter-options">
+							<div class="filter-options__close">
 							</div>
-							<h3 class="products-new__title">21WN reversible angora cardigan</h3>
-							<div class="products-new__price"><span>$120</span></div>
-						</a>
-						<a data-catalog-item="Dress" href="" class="products-new__card">
-							<div class="products-new__img">
-								<picture><source srcset="img/NewArrival/2.webp" type="image/webp"><img src="img/NewArrival/2.jpg" alt=""></picture>
-							</div>
-							<h3 class="products-new__title">21WN reversible angora cardigan</h3>
-							<div class="products-new__price"><span>$120</span></div>
-						</a>
-						<a data-catalog-item="Dress" href="" class="products-new__card">
-							<div class="products-new__img">
-								<picture><source srcset="img/NewArrival/2.webp" type="image/webp"><img src="img/NewArrival/2.jpg" alt=""></picture>
-							</div>
-							<h3 class="products-new__title">21WN reversible angora cardigan</h3>
-							<div class="products-new__price"><span>$120</span></div>
-						</a>
-						<a data-catalog-item="Tshirt" href="" class="products-new__card">
-							<div class="products-new__img">
-								<picture><source srcset="img/NewArrival/3.webp" type="image/webp"><img src="img/NewArrival/3.jpg" alt=""></picture>
-							</div>
-							<h3 class="products-new__title">21WN reversible angora cardigan</h3>
-							<div class="products-new__price"><span>$120</span></div>
-						</a>
-						<a data-catalog-item="Bag" href="" class="products-new__card">
-							<div class="products-new__img">
-								<picture><source srcset="img/NewArrival/4.webp" type="image/webp"><img src="img/NewArrival/4.jpg" alt=""></picture>
-							</div>
-							<h3 class="products-new__title">21WN reversible angora cardigan</h3>
-							<div class="products-new__price"><span>$120</span></div>
-						</a>
-						<a data-catalog-item="Bag" href="" class="products-new__card">
-							<div class="products-new__img">
-								<picture><source srcset="img/NewArrival/4.webp" type="image/webp"><img src="img/NewArrival/4.jpg" alt=""></picture>
-							</div>
-							<h3 class="products-new__title">21WN reversible angora cardigan</h3>
-							<div class="products-new__price"><span>$120</span></div>
-						</a>
+						</div>
 					</div>
-					<a class="new__btn btn">
-						<button>Explore More</button>
-						<span class="icon-arrow-long"></spanc>
+				</div>
+				<div class="catalog__tags"></div>
+				<div data-view-catalog class="catalog__products products">
+					<div class="products__items">
+						<div class="products__item product">
+							<div class="product__row">
+								<div class="product__img">
+									<picture><source srcset="img/Catalog/4.webp" type="image/webp"><img class="product__img-card" src="img/Catalog/4.jpg" alt=""></picture>
+									<picture class="product__favorite">
+										<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="none">
+											<path d="M0 0h24v24H0z" fill="none" />
+											<path stroke="#14142B" stroke-width="0.5" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+										</svg>
+									</picture>
+								</div>
+							</div>
+							<div class="product__row">
+								<div class="product__name">Lamerei</div>
+								<div class="product__description">Recycle Boucle Knit Cardigan Pink</div>
+								<div class="product__price">$120</div>
+								<div class="product__ratings ratings">
+									<span class="ratings__icon icon-star"></span>
+									<span class="ratings__rating">4.8</span>
+									<span class="ratings__text">Ratings</span>
+								</div>
+								<div class="product__size size">
+									<span>s</span>
+									<span>m</span>
+									<span>l</span>
+								</div>
+							</div>
+						</div>
+						<div class="products__item product">
+							<div class="product__row">
+								<div class="product__img">
+									<picture><source srcset="img/Catalog/1.webp" type="image/webp"><img class="product__img-card" src="img/Catalog/1.jpg" alt=""></picture>
+									<picture class="product__favorite">
+										<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="none">
+											<path d="M0 0h24v24H0z" fill="none" />
+											<path stroke="#14142B" stroke-width="0.5" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+										</svg>
+									</picture>
+								</div>
+							</div>
+							<div class="product__row">
+								<div class="product__name">Lamerei</div>
+								<div class="product__description">Recycle Boucle Knit Cardigan Pink</div>
+								<div class="product__price">$120</div>
+								<div class="product__ratings ratings">
+									<span class="ratings__icon icon-star"></span>
+									<span class="ratings__rating">4.8</span>
+									<span class="ratings__text">Ratings</span>
+								</div>
+								<div class="product__size size">
+									<span>s</span>
+									<span>m</span>
+									<span>l</span>
+								</div>
+							</div>
+						</div>
+						<div class="products__item product">
+							<div class="product__row">
+								<div class="product__img">
+									<picture><source srcset="img/Catalog/2.webp" type="image/webp"><img class="product__img-card" src="img/Catalog/2.jpg" alt=""></picture>
+									<picture class="product__favorite">
+										<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="none">
+											<path d="M0 0h24v24H0z" fill="none" />
+											<path stroke="#14142B" stroke-width="0.5" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+										</svg>
+									</picture>
+								</div>
+							</div>
+							<div class="product__row">
+								<div class="product__name">Lamerei</div>
+								<div class="product__description">Recycle Boucle Knit Cardigan Pink</div>
+								<div class="product__price">$120</div>
+								<div class="product__ratings ratings">
+									<span class="ratings__icon icon-star"></span>
+									<span class="ratings__rating">4.8</span>
+									<span class="ratings__text">Ratings</span>
+								</div>
+								<div class="product__size size">
+									<span>s</span>
+									<span>m</span>
+									<span>l</span>
+								</div>
+							</div>
+						</div>
+						<div class="products__item product">
+							<div class="product__row">
+								<div class="product__img">
+									<picture><source srcset="img/Catalog/3.webp" type="image/webp"><img class="product__img-card" src="img/Catalog/3.jpg" alt=""></picture>
+									<picture class="product__favorite">
+										<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="none">
+											<path d="M0 0h24v24H0z" fill="none" />
+											<path stroke="#14142B" stroke-width="0.5" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+										</svg>
+									</picture>
+								</div>
+							</div>
+							<div class="product__row">
+								<div class="product__name">Lamerei</div>
+								<div class="product__description">Recycle Boucle Knit Cardigan Pink</div>
+								<div class="product__price">$120</div>
+								<div class="product__ratings ratings">
+									<span class="ratings__icon icon-star"></span>
+									<span class="ratings__rating">4.8</span>
+									<span class="ratings__text">Ratings</span>
+								</div>
+								<div class="product__size size">
+									<span>s</span>
+									<span>m</span>
+									<span>l</span>
+								</div>
+							</div>
+						</div>
+						<div class="products__item product">
+							<div class="product__row">
+								<div class="product__img">
+									<picture><source srcset="img/Catalog/4.webp" type="image/webp"><img class="product__img-card" src="img/Catalog/4.jpg" alt=""></picture>
+									<picture class="product__favorite">
+										<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="none">
+											<path d="M0 0h24v24H0z" fill="none" />
+											<path stroke="#14142B" stroke-width="0.5" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+										</svg>
+									</picture>
+								</div>
+							</div>
+							<div class="product__row">
+								<div class="product__name">Lamerei</div>
+								<div class="product__description">Recycle Boucle Knit Cardigan Pink</div>
+								<div class="product__price">$120</div>
+								<div class="product__ratings ratings">
+									<span class="ratings__icon icon-star"></span>
+									<span class="ratings__rating">4.8</span>
+									<span class="ratings__text">Ratings</span>
+								</div>
+								<div class="product__size size">
+									<span>s</span>
+									<span>m</span>
+									<span>l</span>
+								</div>
+							</div>
+						</div>
+						<div class="products__item product">
+							<div class="product__row">
+								<div class="product__img">
+									<picture><source srcset="img/Catalog/2.webp" type="image/webp"><img class="product__img-card" src="img/Catalog/2.jpg" alt=""></picture>
+									<picture class="product__favorite">
+										<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="none">
+											<path d="M0 0h24v24H0z" fill="none" />
+											<path stroke="#14142B" stroke-width="0.5" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+										</svg>
+									</picture>
+								</div>
+							</div>
+							<div class="product__row">
+								<div class="product__name">Lamerei</div>
+								<div class="product__description">Recycle Boucle Knit Cardigan Pink</div>
+								<div class="product__price">$120</div>
+								<div class="product__ratings ratings">
+									<span class="ratings__icon icon-star"></span>
+									<span class="ratings__rating">4.8</span>
+									<span class="ratings__text">Ratings</span>
+								</div>
+								<div class="product__size size">
+									<span>s</span>
+									<span>m</span>
+									<span>l</span>
+								</div>
+							</div>
+						</div>
+						<div class="products__item product">
+							<div class="product__row">
+								<div class="product__img">
+									<picture><source srcset="img/Catalog/3.webp" type="image/webp"><img class="product__img-card" src="img/Catalog/3.jpg" alt=""></picture>
+									<picture class="product__favorite">
+										<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="none">
+											<path d="M0 0h24v24H0z" fill="none" />
+											<path stroke="#14142B" stroke-width="0.5" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+										</svg>
+									</picture>
+								</div>
+							</div>
+							<div class="product__row">
+								<div class="product__name">Lamerei</div>
+								<div class="product__description">Recycle Boucle Knit Cardigan Pink</div>
+								<div class="product__price">$120</div>
+								<div class="product__ratings ratings">
+									<span class="ratings__icon icon-star"></span>
+									<span class="ratings__rating">4.8</span>
+									<span class="ratings__text">Ratings</span>
+								</div>
+								<div class="product__size size">
+									<span>s</span>
+									<span>m</span>
+									<span>l</span>
+								</div>
+							</div>
+						</div>
+						<div class="products__item product">
+							<div class="product__row">
+								<div class="product__img">
+									<picture><source srcset="img/Catalog/1.webp" type="image/webp"><img class="product__img-card" src="img/Catalog/1.jpg" alt=""></picture>
+									<picture class="product__favorite">
+										<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="none">
+											<path d="M0 0h24v24H0z" fill="none" />
+											<path stroke="#14142B" stroke-width="0.5" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+										</svg>
+									</picture>
+								</div>
+							</div>
+							<div class="product__row">
+								<div class="product__name">Lamerei</div>
+								<div class="product__description">Recycle Boucle Knit Cardigan Pink</div>
+								<div class="product__price">$120</div>
+								<div class="product__ratings ratings">
+									<span class="ratings__icon icon-star"></span>
+									<span class="ratings__rating">4.8</span>
+									<span class="ratings__text">Ratings</span>
+								</div>
+								<div class="product__size size">
+									<span>s</span>
+									<span>m</span>
+									<span>l</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="catalog__pagination pagination">
+					<a class="pagination__show-more btn">
+						<button>Show more</button>
+						<span class=" icon-refresh"></spanc>
 					</a>
-				</div>
-			</section>
-			<section class="brands">
-				<div class="brands__container">
-					<div class="brands__decor-top decor">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-					<div class="brands__body">
-						<div class="brands__item">
-							<picture><source srcset="img/Brands/1.webp" type="image/webp"><img src="img/Brands/1.png" alt=""></picture>
-						</div>
-						<div class="brands__item">
-							<picture><source srcset="img/Brands/2.webp" type="image/webp"><img src="img/Brands/2.png" alt=""></picture>
-						</div>
-						<div class="brands__item">
-							<picture><source srcset="img/Brands/3.webp" type="image/webp"><img src="img/Brands/3.png" alt=""></picture>
-						</div>
-						<div class="brands__item">
-							<picture><source srcset="img/Brands/4.webp" type="image/webp"><img src="img/Brands/4.png" alt=""></picture>
-						</div>
-						<div class="brands__item">
-							<picture><source srcset="img/Brands/5.webp" type="image/webp"><img src="img/Brands/5.png" alt=""></picture>
-						</div>
-						<div class="brands__item">
-							<picture><source srcset="img/Brands/6.webp" type="image/webp"><img src="img/Brands/6.png" alt=""></picture>
-						</div>
-					</div>
-					<div class="brands__decor-bottom decor">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-				</div>
-			</section>
-			<section class="collections">
-				<div class="collections__container">
-					<h2 class="collections__title title">Collections</h2>
-					<div class="collections__slider slider-collections">
-						<div class="slider-collections__wrapper swiper-wrapper">
-							<div class="slider-collections__slide swiper-slide">
-								<a href="" target="_blank" class="slider-collections__link">
-									<picture><source srcset="img/Collections/1.webp" type="image/webp"><img src="img/Collections/1.jpg" alt=""></picture>
-								</a>
-							</div>
-							<div class="slider-collections__slide swiper-slide">
-								<a href="" target="_blank" class="slider-collections__link">
-									<picture><source srcset="img/Collections/2.webp" type="image/webp"><img src="img/Collections/2.jpg" alt=""></picture>
-								</a>
-							</div>
-						</div>
-						<div class="slider-collections__pagination">
-						</div>
-						<div class="slider-collections__nav swiper-navigation">
-							<button class="collections-nav__prev button-prev icon-arrow"></button>
-							<button class="collections-nav__next button-next icon-arrow"></button>
-						</div>
-					</div>
-					<a class="collections__btn btn">
-						<button>Explore More</button>
-						<span class="icon-arrow-long"></span>
-					</a>
-				</div>
-			</section>
-			<section class="for-you">
-				<div class="for-you__container">
-					<h2 class="for-you__title title">Just for you</h2>
-					<div class="for-you__decor decor">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-					<div class="for-you__slider slider-for-you">
-						<div class="slider-for-you__wrapper swiper-wrapper">
-							<div class="slider-for-you__slide swiper-slide">
-								<div class="slider-for-you__products">
-									<a href="" class="products__card">
-										<div class="products__img">
-											<picture><source srcset="img/NewArrival/1.webp" type="image/webp"><img src="img/NewArrival/1.jpg" alt=""></picture>
-										</div>
-										<h3 class="products__title">21WN reversible angora cardigan</h3>
-										<div class="products__price"><span>$120</span></div>
-									</a>
-								</div>
-							</div>
-							<div class="slider-for-you__slide swiper-slide">
-								<div class="slider-for-you__products">
-									<a href="" class="products__card">
-										<div class="products__img">
-											<picture><source srcset="img/NewArrival/2.webp" type="image/webp"><img src="img/NewArrival/2.jpg" alt=""></picture>
-										</div>
-										<h3 class="products__title">21WN reversible angora cardigan</h3>
-										<div class="products__price"><span>$120</span></div>
-									</a>
-								</div>
-							</div>
-							<div class="slider-for-you__slide swiper-slide">
-								<div class="slider-for-you__products">
-									<a href="" class="products__card">
-										<div class="products__img">
-											<picture><source srcset="img/NewArrival/3.webp" type="image/webp"><img src="img/NewArrival/3.jpg" alt=""></picture>
-										</div>
-										<h3 class="products__title">21WN reversible angora cardigan</h3>
-										<div class="products__price"><span>$120</span></div>
-									</a>
-								</div>
-							</div>
-							<div class="slider-for-you__slide swiper-slide">
-								<div class="slider-for-you__products">
-									<a href="" class="products__card">
-										<div class="products__img">
-											<picture><source srcset="img/NewArrival/4.webp" type="image/webp"><img src="img/NewArrival/4.jpg" alt=""></picture>
-										</div>
-										<h3 class="products__title">21WN reversible angora cardigan</h3>
-										<div class="products__price"><span>$120</span></div>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="slider-for-you__pagination">
-						</div>
-						<div class="slider-for-you__nav swiper-navigation">
-							<button class="slider-for-you__prev button-prev icon-arrow"></button>
-							<button class="slider-for-you__next button-next icon-arrow"></button>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="trending">
-				<div class="trending__container">
-					<h2 class="trending__title title">@Tranding</h2>
-					<ul class="trending__list">
-						<li class="trending__element"><a target="_blank" href="">#2021</a></li>
-						<li class="trending__element"><a target="_blank" href="">#spring</a></li>
-						<li class="trending__element"><a target="_blank" href="">#collection</a></li>
-						<li class="trending__element"><a target="_blank" href="">#fall</a></li>
-						<li class="trending__element"><a target="_blank" href="">#dress</a></li>
-						<li class="trending__element"><a target="_blank" href="">#autumncollection</a></li>
-						<li class="trending__element"><a target="_blank" href="">#2021</a>#openfashion</li>
-					</ul>
-				</div>
-			</section>
-			<section class="about">
-				<div class="about__container">
-					<picture><source srcset="img/logo.webp" type="image/webp"><img class="about__logo" src="img/logo.png" alt=""></picture>
-					<p class="about__subtitle">Making a luxurious lifestyle accessible for a generous group of women is our daily drive.</p>
-					<div class="about__decor decor">
-						<span></span><span></span><span></span>
-					</div>
-					<div class="about__items">
-						<div class="about__item">
-							<picture><source srcset="img/OpenFashion/1.webp" type="image/webp"><img src="img/OpenFashion/1.png" alt="" class="about__img"></picture>
-							<p class="about__text">Fast shipping. Free on orders over $25.</p>
-						</div>
-						<div class="about__item">
-							<picture><source srcset="img/OpenFashion/2.webp" type="image/webp"><img src="img/OpenFashion/2.png" alt="" class="about__img"></picture>
-							<p class="about__text">Sustainable process
-								from start to finish.</p>
-						</div>
-						<div class="about__item">
-							<picture><source srcset="img/OpenFashion/3.webp" type="image/webp"><img src="img/OpenFashion/3.png" alt="" class="about__img"></picture>
-							<p class="about__text">Unique designs
-								and high-quality materials.</p>
-						</div>
-						<div class="about__item">
-							<picture><source srcset="img/OpenFashion/4.webp" type="image/webp"><img src="img/OpenFashion/4.png" alt="" class="about__img"></picture>
-							<p class="about__text">Fast shipping. Free on orders over $25.</p>
-						</div>
-					</div>
-					<picture><source srcset="img/OpenFashion/5.webp" type="image/webp"><img src="img/OpenFashion/5.png" alt="" class="about__image-decor"></picture>
-				</div>
-			</section>
-			<section class="follow">
-				<div class="follow__container">
-					<div class="follow__title title">Follow us</div>
-					<a class="follow__inst icon-instagram"></a>
-					<div class="follow__cards">
-						<a class="follow__card">
-							<picture><source srcset="img/FollowUs/1.webp" type="image/webp"><img src="img/FollowUs/1.jpg" alt=""></picture>
-							<span>@mia</span>
+					<div class="pagination__numbers">
+						<a class="pagination__number btn" href="">
+							<button>1</button>
 						</a>
-						<a class="follow__card">
-							<picture><source srcset="img/FollowUs/2.webp" type="image/webp"><img src="img/FollowUs/2.jpg" alt=""></picture>
-							<span>@_jihyn</span>
+						<a class="pagination__number btn" href="">
+							<button>2</button>
 						</a>
-						<a class="follow__card">
-							<picture><source srcset="img/FollowUs/3.webp" type="image/webp"><img src="img/FollowUs/3.jpg" alt=""></picture>
-							<span>@mia</span>
-						</a>
-						<a class="follow__card">
-							<picture><source srcset="img/FollowUs/4.webp" type="image/webp"><img src="img/FollowUs/4.jpg" alt=""></picture>
-							<span>@jihyn</span>
-						</a>
+						<button class="pagination__next icon-arrow"></button>
 					</div>
 				</div>
-			</section>
-		</main>
+			</div>
+		</div>
 		<footer class="footer">
 			<div class="footer__container">
 				<div class="footer__column">
