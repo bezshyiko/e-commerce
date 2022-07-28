@@ -2245,9 +2245,6 @@ h6 {
       align-self: start;
 }
 
-.catalog__tags :not(:last-child) {
-  margin-right: 0.625rem;
-}
 
 .catalog__tags span {
   border: 1px solid #DEDEDE;
