@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220812100039">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +23,7 @@
 				</button>
 			</div>
 			<div class="header__column">
-				<a href="" class="header__logo">
+				<a href="index.html" class="header__logo">
 					<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt=""></picture>
 				</a>
 			</div>
@@ -334,16 +334,15 @@
 				</div>
 			</div>
 		</header>
-		<div class="catalog">
+		<section class="catalog">
 			<div class="catalog__container">
 				<div class="catalog__filter filter-catalog">
 					<div class="filter-catalog__item">
 						<div class="filter-catalog__category">
 							<select data-pseudo-label="Apparel" multiple data-tags=".catalog__tags">
-								<option value="2">New</option>
-								<option value="3">Apparel</option>
-								<option value="4">Bag</option>
-								<option value="5">Shoes</option>
+								<option data-class="catalog__tag" value="New">New</option>
+								<option data-class="catalog__tag" value="Autumn collections">Autumn collections</option>
+								<option data-class="catalog__tag" value="Summer">Summer</option>
 							</select>
 						</div>
 					</div>
@@ -354,9 +353,88 @@
 						</button>
 					</div>
 					<div class="filter-catalog__item">
-						<button data-filter-button class="filter-catalog__options icon-filter"></button>
-						<div class="filter-catalog__body filter-options">
-							<div class="filter-options__close">
+						<button data-open-button class="filter-catalog__options icon-filter"></button>
+						<div data-filters-body class="filter-catalog__body filter-options">
+							<div data-close-button class="filter-options__close">
+							</div>
+							<div class="filter-options__body">
+								<h3 class="filter-options__title">Filter</h3>
+								<div data-spollers class="filter-options__items">
+									<div class="filter-options__item">
+										<button type="button" data-spoller class="filter-options__name spollers__title">
+											Color
+										</button>
+										<div class="filter-options__points spollers__body">
+											<div class="filter-options__point checkbox">
+												<input id="white" type="checkbox" class="checkbox__input">
+												<label for="white" class="checkbox__label">white</label>
+											</div>
+											<div class="filter-options__point checkbox">
+												<input id="black" type="checkbox" class="checkbox__input">
+												<label for="black" class="checkbox__label">black</label>
+											</div>
+											<div class="filter-options__point checkbox">
+												<input id="Red" type="checkbox" class="checkbox__input">
+												<label for="Red" class="checkbox__label">Red</label>
+											</div>
+											<div class="filter-options__point checkbox">
+												<input id="Yellow" type="checkbox" class="checkbox__input">
+												<label for="Yellow" class="checkbox__label">Yellow</label>
+											</div>
+										</div>
+									</div>
+									<div class="filter-options__item">
+										<button type="button" data-spoller class="filter-options__name spollers__title">
+											Size
+										</button>
+										<div class="filter-options__points spollers__body">
+											<div class="filter-options__point checkbox">
+												<input id="s" type="checkbox" class="checkbox__input">
+												<label for="s" class="checkbox__label">s</label>
+											</div>
+											<div class="filter-options__point checkbox">
+												<input id="m" type="checkbox" class="checkbox__input">
+												<label for="m" class="checkbox__label">m</label>
+											</div>
+											<div class="filter-options__point checkbox">
+												<input id="xl" type="checkbox" class="checkbox__input">
+												<label for="xl" class="checkbox__label">xl</label>
+											</div>
+										</div>
+									</div>
+									<div class="filter-options__item">
+										<button type="button" data-spoller class="filter-options__name spollers__title">
+											Brand
+										</button>
+										<div class="filter-options__points spollers__body">
+											<div class="filter-options__point checkbox">
+												<input id="Nike" type="checkbox" class="checkbox__input">
+												<label for="Nike" class="checkbox__label">Nike</label>
+											</div>
+											<div class="filter-options__point checkbox">
+												<input id="Gucci" type="checkbox" class="checkbox__input">
+												<label for="Gucci" class="checkbox__label">Gucci</label>
+											</div>
+											<div class="filter-options__point checkbox">
+												<input id="Gap" type="checkbox" class="checkbox__input">
+												<label for="Gap" class="checkbox__label">Gap</label>
+											</div>
+										</div>
+									</div>
+									<div class="filter-options__item">
+										<button type="button" data-spoller class="filter-options__name spollers__title">
+											Price
+										</button>
+										<div data-range class="filter-options__points spollers__body">
+											<div class="filter-options__inputs">
+												<input data-range-from="10" value="500" autocomplete="off" type="text" class="filter-options__input input">
+												<input data-range-to="5000" value="3000" autocomplete="off" type="text" class="filter-options__input input">
+											</div>
+											<div data-range-item class="filter-options__range">
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -606,7 +684,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 		<footer class="footer">
 			<div class="footer__container">
 				<div class="footer__column">
@@ -662,7 +740,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20220727172240"></script>
+	<script src="js/app.min.js?_v=20220812100039"></script>
 </body>
 
 </html>
