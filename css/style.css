@@ -3109,6 +3109,7 @@ textarea.input {
 
 .product-page__sliders {
   overflow: hidden;
+  padding: 0px 0px 6px 0px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 60%;
           flex: 0 0 60%;
@@ -3218,6 +3219,15 @@ textarea.input {
 }
 
 .main-slider-product__slide picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 100%;
 }
@@ -3268,12 +3278,6 @@ textarea.input {
   height: 100%;
 }
 
-.fullscreen .preview-slider-product__wrapper {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .preview-slider-product__slide {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3284,13 +3288,28 @@ textarea.input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
   height: 100%;
   cursor: pointer;
+  padding-bottom: 5px;
+}
+
+.fullscreen .preview-slider-product__slide {
+  padding: 0;
 }
 
 .preview-slider-product__slide picture {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .preview-slider-product__img {
@@ -3309,6 +3328,29 @@ textarea.input {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+
+.preview-slider-product__decor {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  display: none;
+}
+
+.swiper-slide-thumb-active .preview-slider-product__decor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fullscreen .preview-slider-product__decor {
+  display: none;
+}
+
+.preview-slider-product__decor span {
+  background-color: #DD8560 !important;
+  border: none !important;
 }
 
 .content-product {
@@ -3742,6 +3784,7 @@ body::after {
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
     overflow: visible;
+    padding: 0;
   }
 
   .product-page__content {
