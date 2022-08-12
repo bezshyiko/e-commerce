@@ -5962,6 +5962,10 @@
                     el: ".main__pagination",
                     clickable: true
                 },
+                navigation: {
+                    prevEl: ".main-slider-product__prev",
+                    nextEl: ".main-slider-product__next"
+                },
                 thumbs: {
                     swiper: {
                         el: ".preview-slider-product",
@@ -5995,7 +5999,7 @@
                         spaceBetween: 20
                     },
                     1268: {
-                        slidesPerView: 6,
+                        slidesPerView: 4,
                         spaceBetween: 30
                     }
                 },
