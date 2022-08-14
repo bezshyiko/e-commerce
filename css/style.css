@@ -3119,10 +3119,11 @@ textarea.input {
 .product-page__close {
   display: none;
   position: absolute;
+  padding: 0.3125rem;
   top: 2%;
   right: 2%;
   width: 1.875rem;
-  height: 1.125rem;
+  height: 1.875rem;
   cursor: pointer;
   z-index: 5;
 }
@@ -3754,6 +3755,10 @@ body::after {
 
   .products-categories__link {
     padding: 0px 0px 0px 1.625rem;
+  }
+
+  .footer {
+    padding-bottom: 50px;
   }
 
   .footer__container {
