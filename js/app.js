@@ -6167,7 +6167,7 @@
                 modules: [ Navigation, Pagination, Autoplay ],
                 observer: true,
                 observeParents: true,
-                spaceBetween: 10,
+                spaceBetween: 2,
                 speed: 800,
                 pagination: {
                     el: ".slider-for-you__pagination",
@@ -6180,23 +6180,23 @@
                 breakpoints: {
                     320: {
                         slidesPerView: 1.5,
-                        spaceBetween: 10
+                        spaceBetween: 0
                     },
                     425: {
                         slidesPerView: 2.2,
-                        spaceBetween: 20
+                        spaceBetween: 0
                     },
                     768: {
                         slidesPerView: 2.5,
-                        spaceBetween: 20
+                        spaceBetween: 10
                     },
                     992: {
                         slidesPerView: 3.5,
-                        spaceBetween: 20
+                        spaceBetween: 10
                     },
                     1268: {
                         slidesPerView: 4,
-                        spaceBetween: 30
+                        spaceBetween: 10
                     }
                 },
                 on: {}
@@ -6799,14 +6799,6 @@
                 changeTotalProducts();
                 saveCart();
             };
-            const addCartItem = data => {
-                const {id} = data;
-                if (cart[id]) increaseQuantity(id); else {
-                    cart[id] = data;
-                    renderCartItem(data);
-                    updateCart();
-                }
-            };
             const renderCart = () => {
                 const ids = Object.keys(cart);
                 ids.forEach((id => {
@@ -6819,6 +6811,7 @@
                     return acc + quantity;
                 }), 0);
                 if (iconCartQuantity) iconCartQuantity.textContent = totalProducts;
+                if (0 === totalProducts) cartDOMElement.classList.remove("fill"); else cartDOMElement.classList.add("fill");
             };
             const changeTotalPrice = () => {
                 const totalPrice = Object.keys(cart).reduce(((acc, id) => {
@@ -6857,17 +6850,23 @@
                     }));
                 }
             };
+            const addCartItem = data => {
+                const {id} = data;
+                if (cart[id]) increaseQuantity(id); else {
+                    cart[id] = data;
+                    renderCartItem(data);
+                    updateCart();
+                }
+            };
             const deleteCartItem = id => {
                 const cartItemDOMElement = cartDOMElement.querySelector(`[data-product-id="${id}"]`);
                 cartItemDOMElement.remove();
                 delete cart[id];
-                changeTotalProducts();
                 updateCart();
             };
             const changePrice = (quantityValue, id) => {
                 const cartItemDOMElement = cartDOMElement.querySelector(`[data-product-id="${id}"]`);
                 const productPriceValue = cartItemDOMElement.querySelector("[data-product-price]");
-                cartItemDOMElement.querySelector("[data-cart-quantity-value]").value;
                 productPriceValue.textContent = quantityValue * cart[id].price;
                 cart[id].quantity = quantityValue;
                 updateCart();
@@ -6878,7 +6877,6 @@
                 const productQuantityValue = cartItemDOMElement.querySelector("[data-cart-quantity-value]");
                 productQuantityValue.value = quantity;
                 changePrice(quantity, id);
-                changeTotalProducts();
                 updateCart();
             };
             const increaseQuantity = id => {
@@ -6894,7 +6892,7 @@
                 const cartProductsWrapper = document.querySelector("[data-product-wrapper]");
                 const attributeTemplate = attribute ? `<p>Color: <span>${attribute}</span></p> \n      <input type="hidden" name="Color: ${id}" value="${attribute}">` : "";
                 const sizeTemplate = size ? `<p>Size: <span>${size}</span></p>\n      <input type="hidden" name="Size: ${id}" value="${size}">` : "";
-                const cartItemTemplate = `\n      <div class="products-cart__product">\n      <div class="products-cart__item">\n         <div class="products-cart__image"><img src="${src}" alt=""></div>\n         <div class="products-cart__data">\n         <input type="hidden" name="Product: ${id}" value="${name}">\n         <input type="hidden" name="Quantity: ${id}" value="${quantity}">\n         <input type="hidden" name="Price: ${id}" value="${quantity * price}">\n            <div class="products-cart__name">${name}</div>\n            <div class="products-cart__description">\n               ${attributeTemplate}\n               ${sizeTemplate}\n            </div>\n         </div>\n      </div>\n      <div class="products-cart__item">\n         <div data-quantity class="products-cart__quantity quantity">\n            <button data-cart-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>\n            <div class="quantity__input">\n               <input data-cart-quantity-value type="text" name="" value="${quantity}">\n            </div>\n            <button data-cart-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>\n         </div>\n         <div class="products-cart__price">\n            <span data-product-price>${quantity * price}</span>\n            <span>$</span>\n         </div>\n      </div>\n      <button data-cart-delete class="products-cart__delete">\n      </button>\n   </div>`;
+                const cartItemTemplate = `\n      <div class="products-cart__product">\n      <div class="products-cart__item">\n         <div class="products-cart__image"><img src="${src}" alt=""></div>\n         <div class="products-cart__data">\n         <input type="hidden" name="Product: ${id}" value="${name}">\n         <input type="hidden" name="Quantity: ${id}" value="${quantity}">\n         <input type="hidden" name="Price: ${id}" value="${quantity * price}">\n            <div class="products-cart__name">${name}</div>\n            <div class="products-cart__description">\n               ${attributeTemplate}\n               ${sizeTemplate}\n            </div>\n         </div>\n      </div>\n      <div class="products-cart__item">\n         <div data-quantity class="products-cart__quantity quantity">\n            <button data-cart-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>\n            <div class="quantity__input">\n               <input data-cart-quantity-value type="text" name="" value="${quantity}">\n            </div>\n            <button data-cart-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>\n         </div>\n         <div class="products-cart__price">\n            <span data-product-price>${quantity * price}</span>\n            <span>$</span>\n         </div>\n      </div>\n      <div class="products-cart__item">\n         <button data-cart-delete class="products-cart__delete">\n      </button>\n      </div>\n   </div>`;
                 cartItemDOMElement.innerHTML = cartItemTemplate;
                 cartItemDOMElement.setAttribute("data-product-id", id);
                 cartProductsWrapper.appendChild(cartItemDOMElement);
@@ -6934,10 +6932,9 @@
                     const targetElement = e.target;
                     const cartItemDOMElement = targetElement.closest("[data-product-id]");
                     const productID = cartItemDOMElement.dataset.productId;
-                    const valueElement = targetElement.closest("[data-quantity]").querySelector("[data-cart-quantity-value]");
-                    const value = valueElement.value;
-                    const numbers = /^[0-9]+$/;
-                    if (value.match(numbers)) updateQuantity(value, productID);
+                    const quantityValue = cartItemDOMElement.querySelector("[data-cart-quantity-value]").value;
+                    let value = parseInt(quantityValue);
+                    changePrice(value, productID);
                 }));
             };
             cartInit();
