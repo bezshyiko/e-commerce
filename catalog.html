@@ -6,8 +6,8 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220814084336">
-	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220914075351">
+	<link rel="shortcut icon" href="">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -31,7 +31,7 @@
 				<div class="header__icons">
 					<button class="header__search icon-search"></button>
 					<button class="header__user icon-user"></button>
-					<button class="header__cart icon-cart"></button>
+					<button data-cart-icon data-popup="#cart" class="header__cart icon-cart"><span data-cart-icon-quantity>0</span></button>
 				</div>
 				<div class="header__menu menu">
 					<div class="menu__body">
@@ -730,17 +730,38 @@
 			</div>
 		</footer>
 	</div>
-	<!-- <div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-				Text
+	<div id="cart" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div data-cart class="cart">
+					<div class="cart__empty">Cart empty</div>
+					<div class="cart__top">
+						<div class="cart__item">
+							<h2 class="cart__title">Cart</h2>
+							<div class="cart__decor decor">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+						<div class="cart__item">
+							<div data-product-wrapper class="cart__products products-cart">
+							</div>
+						</div>
+					</div>
+					<div class="cart__total">
+						<span>Total:</span>
+						<span data-total-price>120</span>
+						<span>$</span>
+						<input data-total-input-price type="hidden" value="0">
+					</div>
+					<div class="cart__bottom"></div>
+				</div>
 			</div>
 		</div>
 	</div>
-</div> -->
-	<script src="js/app.min.js?_v=20220814084336"></script>
+	<script src="js/app.min.js?_v=20220914075351"></script>
 </body>
 
 </html>

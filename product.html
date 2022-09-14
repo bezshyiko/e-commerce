@@ -6,8 +6,8 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220814084336">
-	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220914075351">
+	<link rel="shortcut icon" href="">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -31,7 +31,7 @@
 				<div class="header__icons">
 					<button class="header__search icon-search"></button>
 					<button class="header__user icon-user"></button>
-					<button class="header__cart icon-cart"></button>
+					<button data-cart-icon data-popup="#cart" class="header__cart icon-cart"><span data-cart-icon-quantity>0</span></button>
 				</div>
 				<div class="header__menu menu">
 					<div class="menu__body">
@@ -336,13 +336,13 @@
 		</header>
 		<div class="product-page">
 			<div class="product-page__container">
-				<section class="product-page__card">
+				<section data-product data-product-name="Monah" data-product-price="120" data-product-attribute="White" data-product-src="img/Catalog/1.jpg" data-product-size="s" class="product-page__card">
 					<div data-sliders class="product-page__sliders">
 						<div data-close-sliders class="product-page__close"></div>
 						<div class="product-page__slider-main main-slider-product">
 							<div class="main-slider-product__wrapper swiper-wrapper">
 								<div data-slide class="main-slider-product__slide swiper-slide">
-									<picture><source srcset="img/PageProduct/1.webp" type="image/webp"><img class="main-slider-product__img" src="img/PageProduct/1.jpg" alt=""></picture>
+									<picture><source srcset="img/PageProduct/1.webp" type="image/webp"><img data-cart-image class="main-slider-product__img" src="img/PageProduct/1.jpg" alt=""></picture>
 								</div>
 								<div data-slide class="main-slider-product__slide swiper-slide">
 									<picture><source srcset="img/PageProduct/2.webp" type="image/webp"><img class="main-slider-product__img" src="img/PageProduct/2.jpg" alt=""></picture>
@@ -358,6 +358,10 @@
 								<button class="main-slider-product__prev button-prev icon-arrow"></button>
 								<button class="main-slider-product__next button-next icon-arrow"></button>
 							</div>
+							<button data-slide class="main-slider-product__full">
+								<span class="icon-arrow"></span>
+								<span class="icon-arrow"></span>
+							</button>
 						</div>
 						<div class="product-page__slider-preview preview-slider-product">
 							<div class="preview-slider-product__wrapper swiper-wrapper">
@@ -412,7 +416,7 @@
 								<span>l</span>
 							</div>
 						</div>
-						<button class="content-product__button btn">Add to basket</button>
+						<button data-add-to-cart class="content-product__button btn">Add to basket</button>
 					</div>
 				</section>
 				<section class="product-page__gallery gallery">
@@ -554,17 +558,38 @@
 			</div>
 		</footer>
 	</div>
-	<!-- <div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-				Text
+	<div id="cart" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div data-cart class="cart">
+					<div class="cart__empty">Cart empty</div>
+					<div class="cart__top">
+						<div class="cart__item">
+							<h2 class="cart__title">Cart</h2>
+							<div class="cart__decor decor">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+						<div class="cart__item">
+							<div data-product-wrapper class="cart__products products-cart">
+							</div>
+						</div>
+					</div>
+					<div class="cart__total">
+						<span>Total:</span>
+						<span data-total-price>120</span>
+						<span>$</span>
+						<input data-total-input-price type="hidden" value="0">
+					</div>
+					<div class="cart__bottom"></div>
+				</div>
 			</div>
 		</div>
 	</div>
-</div> -->
-	<script src="js/app.min.js?_v=20220814084336"></script>
+	<script src="js/app.min.js?_v=20220914075351"></script>
 </body>
 
 </html>
