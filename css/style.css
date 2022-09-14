@@ -2397,6 +2397,7 @@ body::after {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border-radius: 1%;
+  max-width:330px;
 }
 
 .products-main__img {
