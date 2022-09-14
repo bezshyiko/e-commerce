@@ -3367,6 +3367,7 @@ body::after {
 
 .fullscreen .product-page__close {
   display: block;
+  padding: 10px;
 }
 
 .product-page__content {
