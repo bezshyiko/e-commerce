@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220914172003">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220916173010">
 	<link rel="shortcut icon" href="">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -571,7 +571,7 @@
 								<span></span>
 								<span></span>
 							</div>
-							<div data-cart-empty class="cart__empty">Cart empty</div>
+							<div data-cart-empty class="cart__empty icon-cart">Cart empty</div>
 						</div>
 						<div class="cart__item">
 							<div data-product-wrapper class="cart__products products-cart">
@@ -584,12 +584,24 @@
 						<span>$</span>
 						<input data-total-input-price type="hidden" value="0">
 					</div>
-					<div class="cart__bottom"></div>
+					<div class="cart__bottom">
+						<h2 class="cart__title">Data for ordering</h2>
+						<div class="cart__form form-cart">
+							<div class="form-cart__body">
+								<div class="form-cart__item">
+									<label for="name">
+										<input type="text" name="name" id="name">
+										<span class="form-cart__label">Your name</span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220914172003"></script>
+	<script src="js/app.min.js?_v=20220916173010"></script>
 </body>
 
 </html>
