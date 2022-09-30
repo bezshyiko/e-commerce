@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220918154905">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220930160827">
 	<link rel="shortcut icon" href="">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,8 +29,20 @@
 			</div>
 			<div class="header__column">
 				<div class="header__icons">
-					<button class="header__search icon-search"></button>
-					<button class="header__user icon-user"></button>
+					<div data-open-button class="header__search icon-search">
+
+					</div>
+					<div data-search-body class="search">
+						<div class="search__body">
+							<button class="search__close" data-close-button></button>
+							<div class="search__top icon-search">
+								<input placeholder="пошук" type="text" class="search__input ">
+								<button class="search__button icon-arrow"></button>
+							</div>
+							<div class="search__bottom"></div>
+						</div>
+					</div>
+					<button data-popup="#sign-up" class="header__user icon-user"></button>
 					<button data-cart-icon data-popup="#cart" class="header__cart icon-cart"><span data-cart-icon-quantity>0</span></button>
 				</div>
 				<div class="header__menu menu">
@@ -811,7 +823,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220918154905"></script>
+	<script src="js/app.min.js?_v=20220930160827"></script>
 </body>
 
 </html>

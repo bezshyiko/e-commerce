@@ -206,6 +206,16 @@ h6 {
   z-index: 149;
 }
 
+body::-webkit-scrollbar {
+  width: 5px;
+  overflow: hidden;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #DD8560;
+  border-radius: 10px;
+}
+
 .wrapper {
   min-height: 100%;
   display: -webkit-box;
@@ -1052,6 +1062,8 @@ body::after {
   transition: visibility 0.8s ease 0s;
   visibility: hidden;
   pointer-events: none;
+  height: 100%;
+  width: 100%;
 }
 
 .popup_show {
@@ -1072,30 +1084,24 @@ body::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   min-height: 100%;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   width: 100%;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  align-items: center;
   position: relative;
 }
 
 .popup__close {
   position: absolute;
   padding: 0.3125rem;
-  top: 2%;
+  top: 1%;
   right: 2%;
   width: 1.875rem;
   height: 1.875rem;
@@ -1104,6 +1110,7 @@ body::after {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  background: none;
 }
 
 .popup__close::before,
@@ -1144,10 +1151,11 @@ body::after {
   transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
   background-color: white;
-  padding: 20px;
+  padding: 40px 20px 20px 20px;
   width: 100%;
   max-width: 900px;
   border-radius: 20px;
+  height: 100%;
 }
 
 .lock .popup__content {
@@ -1596,7 +1604,7 @@ body::after {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 89;
+  z-index: 100;
   height: 3.75rem;
   width: 100%;
   background-color: rgb(255, 255, 255);
@@ -1608,6 +1616,11 @@ body::after {
 
 .header._header-scroll {
   height: 50px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.menu-open .header {
+  background-color: rgb(255, 255, 255);
 }
 
 .header__column {
@@ -1700,6 +1713,16 @@ body::after {
   -webkit-transition: all 0.6s;
   -o-transition: all 0.6s;
   transition: all 0.6s;
+}
+
+.menu__body::-webkit-scrollbar {
+  width: 4px;
+  overflow: hidden;
+}
+
+.menu__body::-webkit-scrollbar-thumb {
+  background-color: #DD8560;
+  border-radius: 10px;
 }
 
 .menu-open .menu__body {
@@ -1975,6 +1998,101 @@ body::after {
 
 .contacts-menu__decor {
   margin: 0px 0px 25px 0px;
+}
+
+.search {
+  width: 325px;
+  height: 100%;
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+  right: -100%;
+  overflow: scroll;
+  -webkit-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s;
+  visibility: hidden;
+}
+
+.search.open-search {
+  right: 0;
+  visibility: visible;
+  z-index: 150;
+}
+
+.search__close {
+  display: block;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  width: 1.875rem;
+  height: 1.875rem;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.search__close span,
+.search__close::before,
+.search__close::after {
+  content: "";
+  right: 0;
+  position: absolute;
+  width: 100%;
+  height: 0.125rem;
+  background-color: #000;
+}
+
+.search__close::before {
+  top: calc(50% - 0.0625rem);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.search__close::after {
+  bottom: calc(50% - 0.0625rem);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.search__body {
+  padding: 1.25rem 0px 0px 0px;
+  z-index: 150;
+}
+
+.search__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2.5rem;
+}
+
+.search__top::before {
+  padding-right: 0.625rem;
+}
+
+.search__input {
+  width: 150px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+  font-size: 1rem;
+}
+
+.search__input._form-focus {
+  outline: none;
+}
+
+.search__button {
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.search__button::before {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .icon-menu {
@@ -2423,6 +2541,23 @@ body::after {
 
 .filter__category {
   position: relative;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.filter__category::after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: #DD8560;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .filter__category::before {
@@ -4056,6 +4191,19 @@ body::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100%;
+  overflow: auto;
+  padding: 0 10px 20px 10px;
+}
+
+.cart::-webkit-scrollbar {
+  width: 4px;
+  overflow: hidden;
+}
+
+.cart::-webkit-scrollbar-thumb {
+  background-color: #DD8560;
+  border-radius: 10px;
 }
 
 .cart__empty {
@@ -4232,9 +4380,7 @@ body::after {
   position: absolute;
   width: 100%;
   height: 0.125rem;
-  background-color: #fff;
-  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+  background-color: #888888;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -4412,6 +4558,106 @@ body::after {
 
 .form-cart__button::before {
   z-index: -1;
+}
+
+.popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popup-login {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 315px;
+          flex: 0 0 315px;
+}
+
+.login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.login__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin: 0px 0px 1.25rem 0px;
+}
+
+.login__social {
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin: 0px 0px 1.25rem 0px;
+  background-color: #888888;
+  padding: 0.625rem;
+  color: white;
+  position: relative;
+  text-align: right;
+  width: 11.25rem;
+  position: relative;
+}
+
+.login__social::before {
+  content: "";
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: white;
+  position: absolute;
+  top: calc(50% - 0.625rem);
+  left: 3%;
+  border-radius: 0.3125rem;
+}
+
+.login__social::after {
+  content: "G";
+  font-weight: 700;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  color: #888888;
+  position: absolute;
+  top: calc(50% - 0.46875rem);
+  left: 3%;
+}
+
+.login__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login__form > span {
+  color: #888888;
+  text-align: center;
+  display: block;
+  margin: 0px 0px 0.625rem 0px;
+}
+
+.login__form > span a {
+  color: #DD8560;
+}
+
+.login__form > span a:hover {
+  text-decoration: underline;
 }
 
 .swiper {
@@ -4769,6 +5015,11 @@ body::after {
     color: white;
   }
 
+  .search__button:hover {
+    background-color: #888888;
+    color: white;
+  }
+
   .footer__email:hover {
     color: #000;
   }
@@ -4791,6 +5042,14 @@ body::after {
 
   .main__navigation-next:hover {
     opacity: 1;
+  }
+
+  .filter__category:hover {
+    color: #000000;
+  }
+
+  .filter__category:hover::after {
+    width: 100%;
   }
 
   .products-main__card:hover {
@@ -4871,6 +5130,10 @@ body::after {
 
   .products-cart__delete:hover::before,
   .products-cart__delete:hover::after {
+    background-color: black;
+  }
+
+  .login__social:hover {
     background-color: black;
   }
 }

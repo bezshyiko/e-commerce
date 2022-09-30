@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220918154905">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220930160827">
 	<link rel="shortcut icon" href="">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,8 +29,20 @@
 			</div>
 			<div class="header__column">
 				<div class="header__icons">
-					<button class="header__search icon-search"></button>
-					<button class="header__user icon-user"></button>
+					<div data-open-button class="header__search icon-search">
+
+					</div>
+					<div data-search-body class="search">
+						<div class="search__body">
+							<button class="search__close" data-close-button></button>
+							<div class="search__top icon-search">
+								<input placeholder="пошук" type="text" class="search__input ">
+								<button class="search__button icon-arrow"></button>
+							</div>
+							<div class="search__bottom"></div>
+						</div>
+					</div>
+					<button data-popup="#sign-up" class="header__user icon-user"></button>
 					<button data-cart-icon data-popup="#cart" class="header__cart icon-cart"><span data-cart-icon-quantity>0</span></button>
 				</div>
 				<div class="header__menu menu">
@@ -768,7 +780,39 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220918154905"></script>
+	<div id="sign-up" aria-hidden="true" class="popup">
+		<div class="popup__wrapper popup-login">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="login">
+					<h3 class="login__title">Sign up</h3>
+					<div class="login__social">
+						<a class="login__button">Sign up with Google</a>
+					</div>
+					<form action="" class="login__form">
+						<span>or sign up with email</span>
+						<div class="form-cart__item">
+							<label class="form-cart__name" for="name">
+								<input data-required class="form-cart__input" placeholder=" " type="text" name="name" id="name">
+								<span class="form-cart__label">Your name</span>
+							</label>
+						</div>
+						<div class="form-cart__item">
+							<label class="form-cart__email" for="email">
+								<input data-required class="form-cart__input" placeholder=" " type="text" name="email" id="email">
+								<span class="form-cart__label">Your email</span>
+							</label>
+						</div>
+						<div class="form-cart__item">
+							<button type="submit" class="form-cart__button btn">CHECKOUT</button>
+						</div>
+						<span>Already have an account? <a href="">Login in</a></span>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20220930160827"></script>
 </body>
 
 </html>

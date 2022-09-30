@@ -7107,6 +7107,33 @@
             };
             cartInit();
         }
+        const bodySearch = document.querySelector("[data-search-body]");
+        if (bodySearch) document.addEventListener("click", (e => {
+            const targetElement = e.target;
+            const openBtn = targetElement.closest("[data-open-button]");
+            const closeBtn = targetElement.closest("[data-close-button]");
+            function openSearch() {
+                console.log("open search");
+                bodyLock();
+                bodySearch.classList.add("open-search");
+                document.documentElement.classList.add("search-show");
+            }
+            function closeSearch() {
+                console.log("close search");
+                bodyUnlock();
+                bodySearch.classList.remove("open-search");
+                document.documentElement.classList.remove("search-show");
+            }
+            if (openBtn) {
+                e.preventDefault();
+                openSearch();
+                return;
+            }
+            if (closeBtn || !targetElement.closest("[data-search-body]") && bodySearch.classList.contains("open-search")) {
+                e.preventDefault();
+                closeSearch();
+            }
+        }));
         window["FLS"] = true;
         isWebp();
         menuInit();
